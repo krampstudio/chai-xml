@@ -14,7 +14,7 @@ npm install chai-xml --save-dev
 ## Example
 
 ```javascript
-var chai    = require('chai'); 
+var chai    = require('chai');
 var expect  = require('chai').expect;
 var chaiXml = require('chai-xml');
 
@@ -36,6 +36,12 @@ describe('assert some xml', function(){
     it("should be the same XML as otherXml ", function(){
         expect(someXml).xml.to.equal(otherXml);
     });
+
+    it("should be the same XML ignoring the whitespace at the begining and end of the text nodes", function () {
+        var formattedXml = "<tag>\n\tContent\n</tag>";
+        var unformattedXml = "<tag>Content</tag>";
+        expect(formattedXml).xml.to.deep.equal(unformattedXml);
+    });
 });
 ```
 
@@ -50,7 +56,7 @@ describe('assert some xml', function(){
 ## Contributing
 
 Any contribution is welcome! Please check the [issues](https://github.com/krampstudio/chai-xml/issues). Do some unit tests as far as possible.
- 
+
 ## Release History
  * _0.1.0_ initial release. Support `xml` property, `valid` method and overwrite the `equal/eq/equals` methods
 
