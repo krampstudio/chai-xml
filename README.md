@@ -58,8 +58,10 @@ describe('assert some xml', function(){
 Any contribution is welcome! Please check the [issues](https://github.com/krampstudio/chai-xml/issues). Do some unit tests as far as possible.
 
 ## Release History
- * _0.2.0_ initial release. Support `xml` property, `valid` method and overwrite the `equal/eq/equals` methods
  * _0.3.0_ adding `deep` comparison. Thanks to [PR #2](https://github.com/krampstudio/chai-xml/pull/2)
+   * _0.3.1_ change package.json keywords
+ * _0.2.0_ initial release. Support `xml` property, `valid` method and overwrite the `equal/eq/equals` methods
+
 
 ## License
 Copyright (c) 2014 Bertrand Chevrier  

@@ -1,7 +1,7 @@
 {
   "name": "chai-xml",
   "description": "Xml assertions for Chai",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "homepage": "https://github.com/krampstudio/chai-xml",
   "author": {
     "name": "Bertrand Chevrier",
@@ -29,6 +29,7 @@
     "test": "grunt test"
   },
   "keywords": [
+    "chai-plugin",
     "chai",
     "xml",
     "test",
