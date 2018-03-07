@@ -36,14 +36,23 @@ var chaiXmlPlugin = function chaiXmlPlugin(chai, utils){
         var self = this;
         new Assertion(flag(this, 'xml')).to.be.true;
 
-        new xml2js.Parser().parseString(this._obj, function(err, result){
+        try {
+            new xml2js.Parser().parseString(this._obj, function(err, result){
+                self.assert(
+                    err === null,
+                    'expected #{this} to be valid',
+                    'expected #{this} not be not valid',
+                    err
+                );
+            });
+        } catch(err){
             self.assert(
                 err === null,
                 'expected #{this} to be valid',
                 'expected #{this} not be not valid',
                 err
             );
-        });
+        }
     });
 
     /**
