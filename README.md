@@ -60,9 +60,10 @@ Any contribution is welcome! Please check the [issues](https://github.com/kramps
 ## Release History
  * _0.3.0_ adding `deep` comparison. Thanks to [PR #2](https://github.com/krampstudio/chai-xml/pull/2)
    * _0.3.1_ change package.json keywords
+   * _0.3.2_ Add eslint, fix parsing error when invalid, add package-lock.json
  * _0.2.0_ initial release. Support `xml` property, `valid` method and overwrite the `equal/eq/equals` methods
 
 
 ## License
-Copyright (c) 2014 Bertrand Chevrier  
+Copyright (c) 2014-2018 Bertrand Chevrier  
 Licensed under the MIT license.
