@@ -32,12 +32,12 @@ var chaiXmlPlugin = function chaiXmlPlugin(chai, utils){
      * Check whether the XML is well-formed (not validated against DTD, XSD,
      * but it could be implemented in a further version).
      */
-    Assertion.addMethod('valid', function (value) {
+    Assertion.addMethod('valid', function () {
         var self = this;
         new Assertion(flag(this, 'xml')).to.be.true;
 
         try {
-            new xml2js.Parser().parseString(this._obj, function(err, result){
+            new xml2js.Parser().parseString(this._obj, function(err){
                 self.assert(
                     err === null,
                     'expected #{this} to be valid',
@@ -60,7 +60,6 @@ var chaiXmlPlugin = function chaiXmlPlugin(chai, utils){
      * The strings are mapped to objects using xml2js that are deeply compared)
      */
     var compareXml = function(_super){
-        var self = this;
         return function assertEqual(value){
             var negate;
             var parser;
@@ -83,10 +82,10 @@ var chaiXmlPlugin = function chaiXmlPlugin(chai, utils){
             }
         };
     };
-   Assertion.overwriteMethod('equal', compareXml);
-   Assertion.overwriteMethod('equals', compareXml);
-   Assertion.overwriteMethod('eq', compareXml);
 
+    Assertion.overwriteMethod('equal', compareXml);
+    Assertion.overwriteMethod('equals', compareXml);
+    Assertion.overwriteMethod('eq', compareXml);
 };
 
 module.exports = chaiXmlPlugin;
