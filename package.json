@@ -48,6 +48,6 @@
     "grunt-eslint": "^23.0.0",
     "grunt-mocha-test": "^0.13.3",
     "load-grunt-tasks": "^5.1.0",
-    "mocha": "^1.21.4"
+    "mocha": "^8.1.3"
   }
 }
