@@ -78,7 +78,7 @@ var chaiXmlPlugin = function chaiXmlPlugin(chai, utils){
                     });
                 });
             } else {
-                _super.apply(this, arguments);
+                return _super.apply(this, arguments);
             }
         };
     };
